@@ -43,7 +43,7 @@ FXConverter/
 │── script.js          # Frontend Logic & API Integration
 │── convert.php        # Backend API Handler & Fallback System
 └── screenshots/       # UI Preview Images
-
+```
 ---
 ### 📸 Visual Previews
 
@@ -60,5 +60,6 @@ FXConverter/
 | ![History](./screenshots/history.png) |
 ---
 
-👨‍🎓 Author
-Sumaiya Islam Chowdhury
+
+👨‍🎓 **Author**
+**Sumaiya Islam Chowdhury**
