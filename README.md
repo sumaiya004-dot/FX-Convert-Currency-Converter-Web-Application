@@ -45,7 +45,6 @@ FXConverter/
 └── screenshots/       # UI Preview Images
 
 ---
-
 ### 📸 Visual Previews
 
 | 🏠 Home Page | 🔄 Selection (From) |
@@ -54,12 +53,11 @@ FXConverter/
 
 | 🎯 Selection (To) | 💱 Conversion Result |
 |---|---|
-| ![To](./screenshots/to.png) | ![Result](./screenshots/result.png) |
+| ![To](./screenshots/to.png) | ![Result](./screenshots/convert.png) |
 
 | 📊 History Section |
 |---|
 | ![History](./screenshots/history.png) |
-
 ---
 
 👨‍🎓 Author
