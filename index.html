@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FX Convert — Currency Converter</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="bg-grid"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <main class="wrapper">
+
+    <header class="header">
+      <div class="logo">FX<span>Convert</span></div>
+      <p class="tagline">Live exchange rates, beautifully simple.</p>
+    </header>
+
+    <section class="card">
+
+      <div class="rate-ticker" id="rateTicker">
+        <span class="ticker-label">Loading rates…</span>
+      </div>
+
+      <div class="form-grid">
+
+        <!-- Amount -->
+        <div class="field full">
+          <label for="amount">Amount</label>
+          <input type="number" id="amount" value="1" min="0" step="any" placeholder="Enter amount" />
+        </div>
+
+        <!-- From -->
+        <div class="field">
+          <label for="fromCurrency">From</label>
+          <div class="select-wrap">
+            <select id="fromCurrency"></select>
+          </div>
+        </div>
+
+        <!-- Swap -->
+        <div class="swap-col">
+          <button class="swap-btn" id="swapBtn" title="Swap currencies">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 16V4m0 0L3 8m4-4l4 4"/>
+              <path d="M17 8v12m0 0l4-4m-4 4l-4-4"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- To -->
+        <div class="field">
+          <label for="toCurrency">To</label>
+          <div class="select-wrap">
+            <select id="toCurrency"></select>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="convert-btn" id="convertBtn">
+        <span class="btn-text">Convert</span>
+        <span class="btn-icon">→</span>
+      </button>
+
+      <!-- Result -->
+      <div class="result-box" id="resultBox">
+        <div class="result-amount" id="resultAmount">—</div>
+        <div class="result-meta" id="resultMeta"></div>
+      </div>
+
+      <!-- Rate info -->
+      <div class="rate-info" id="rateInfo"></div>
+
+    </section>
+
+    <!-- History Table -->
+    <section class="history-section" id="historySection" style="display:none">
+      <h2 class="history-title">Conversion History</h2>
+      <div class="table-wrap">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Amount</th>
+              <th>From</th>
+              <th>To</th>
+              <th>Result</th>
+              <th>Rate</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody id="historyBody"></tbody>
+        </table>
+      </div>
+      <button class="clear-btn" id="clearHistory">Clear History</button>
+    </section>
+
+    <footer class="footer">
+      Rates provided by <a href="https://frankfurter.app" target="_blank">Frankfurter API</a> &nbsp;·&nbsp; Fallback handled by PHP
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
